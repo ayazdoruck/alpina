@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpina Shipping • Market Reports</title>
+    <link rel="icon" type="image/png" href="../images/logo_mini.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="v2-theme">
+    <!-- Cinematic Brand Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <span class="loader-text">Alpina Shipping</span>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <!-- Premium Nav -->
+    <header class="header-v2">
+        <div class="header-inner">
+            <a href="index.html" class="logo-v2">
+                <img src="../images/alpina_logo2.png" alt="Alpina">
+            </a>
+            <nav class="nav-v2">
+                <div class="nav-links">
+                    <a href="index.html" data-i18n="nav_home">Ana Sayfa</a>
+                    <a href="services.html" data-i18n="nav_services">Hizmetler</a>
+                    <a href="reports.html" data-i18n="nav_reports">Raporlar</a>
+                    <a href="team.html" data-i18n="nav_team">Ekibimiz</a>
+                    <a href="contact.html" data-i18n="nav_contact">İletişim</a>
+                </div>
+                <div class="lang-switch-v2" onclick="toggleLanguage()">
+                    <span id="lang-text">EN</span>
+                </div>
+                <button class="burger-v2" onclick="document.body.classList.toggle('nav-v2-active')">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="smooth-wrapper">
+        <div class="smooth-content">
+
+            <!-- Page Header -->
+            <section class="section-v2 sub-page-header">
+                <div class="container">
+                    <span class="hero-label" data-i18n="market_label">INTELLIGENCE</span>
+                    <h1 class="hero-heading split-text" data-i18n="nav_reports">Market Raporları</h1>
+                    <p class="reveal-text" style="font-size: 20px;" data-i18n="market_desc">Sophisticated market
+                        intelligence for critical decision makers.</p>
+                </div>
+            </section>
+
+            <!-- Report List -->
+            <section class="section-v2">
+                <div class="container">
+                    <div class="report-table-header">
+                        <span class="col-date">DATE</span>
+                        <span class="col-title">TITLE</span>
+                        <span class="col-action">DOWNLOAD</span>
+                    </div>
+                    <div class="report-list-v2">
+                        <!-- Report 1 -->
+                        <div class="report-row fade-up">
+                            <span class="col-date">28 Feb 2026</span>
+                            <h3 class="col-title">Monthly Dry Bulk Market Analysis - Feb 2026</h3>
+                            <a href="#" class="btn-download"><i data-lucide="download"></i> PDF</a>
+                        </div>
+                        <!-- Report 2 -->
+                        <div class="report-row fade-up">
+                            <span class="col-date">15 Jan 2026</span>
+                            <h3 class="col-title">Annual Ship Recycling & Sustainability Review 2025</h3>
+                            <a href="#" class="btn-download"><i data-lucide="download"></i> PDF</a>
+                        </div>
+                        <!-- Report 3 -->
+                        <div class="report-row fade-up">
+                            <span class="col-date">10 Dec 2025</span>
+                            <h3 class="col-title">S&P Market Highlights: New Shipyard Capacity</h3>
+                            <a href="#" class="btn-download"><i data-lucide="download"></i> PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Global Footer CTA -->
+            <footer class="footer-v2">
+                <div class="container">
+                    <div class="footer-cta fade-up">
+                        <h4 data-i18n="footer_cta">Ready to sail?</h4>
+                        <a href="mailto:alpina@alpinashipping.com" class="footer-mail">alpina@alpinashipping.com</a>
+                    </div>
+                    <div class="footer-bottom-v2">
+                        <br><br>
+                        <p data-i18n="footer_copy">© 2026 Alpina Shipping. Developed for Tomorrow.</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

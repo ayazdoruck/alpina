@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpina Shipping • Contact</title>
+    <link rel="icon" type="image/png" href="../images/logo_mini.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="v2-theme">
+    <!-- Cinematic Brand Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <span class="loader-text">Alpina Shipping</span>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <!-- Premium Nav -->
+    <header class="header-v2">
+        <div class="header-inner">
+            <a href="index.html" class="logo-v2">
+                <img src="../images/alpina_logo2.png" alt="Alpina">
+            </a>
+            <nav class="nav-v2">
+                <div class="nav-links">
+                    <a href="index.html" data-i18n="nav_home">Ana Sayfa</a>
+                    <a href="services.html" data-i18n="nav_services">Hizmetler</a>
+                    <a href="reports.html" data-i18n="nav_reports">Raporlar</a>
+                    <a href="team.html" data-i18n="nav_team">Ekibimiz</a>
+                    <a href="contact.html" data-i18n="nav_contact">İletişim</a>
+                </div>
+                <div class="lang-switch-v2" onclick="toggleLanguage()">
+                    <span id="lang-text">EN</span>
+                </div>
+                <button class="burger-v2" onclick="document.body.classList.toggle('nav-v2-active')">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="smooth-wrapper">
+        <div class="smooth-content">
+
+            <!-- Page Header -->
+            <section class="section-v2 sub-page-header">
+                <div class="container">
+                    <span class="hero-label" data-i18n="nav_contact">CONTACT</span>
+                    <h1 class="hero-heading split-text" data-i18n="contact_title">Bağlantı Kurun</h1>
+                </div>
+            </section>
+
+            <!-- Map Section -->
+            <section class="section-v2" style="padding-top: 0;">
+                <div class="container">
+                    <div class="contact-map-v2 fade-up">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5057.362701365491!2d28.98340943414636!3d41.08809675313669!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabbf5f894d77b%3A0xef28311c2ef9c2b!2sAlpina%20Shipping%20and%20Trading%20Co.%20Ltd.!5e0!3m2!1str!2sus!4v1771877030502!5m2!1str!2sus"
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Offices Section -->
+            <section class="section-v2" style="padding-top: 0;">
+                <div class="container grid-2 contact-main">
+                    <div class="contact-info-block fade-up">
+                        <h2 data-i18n="contact_office_title">Istanbul Office</h2>
+                        <p>Hamidiye Mah. Cendere Cad. <br> Seba Central, A Blok, No: 21 Kat: 8 <br> Kağıthane 34408
+                            Istanbul, Türkiye</p>
+
+                        <div class="contact-methods">
+                            <a href="tel:+902123201570"
+                                style="display: flex; align-items: center; gap: 15px; color: var(--white); text-decoration: none; margin-top: 25px; font-weight: 600;">
+                                <i data-lucide="phone" style="color: var(--accent-v2);"></i> +90 212 320 15 70
+                            </a>
+                            <a href="mailto:alpina@alpinashipping.com"
+                                style="display: flex; align-items: center; gap: 15px; color: var(--white); text-decoration: none; margin-top: 15px; font-weight: 600;">
+                                <i data-lucide="mail" style="color: var(--accent-v2);"></i> alpina@alpinashipping.com
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form-block fade-up">
+                        <form class="v2-form">
+                            <input type="text" data-i18n-placeholder="contact_form_placeholder_name" placeholder="Name">
+                            <input type="email" data-i18n-placeholder="contact_form_placeholder_email"
+                                placeholder="Email">
+                            <textarea data-i18n-placeholder="contact_form_placeholder_message" placeholder="Message"
+                                rows="5"></textarea>
+                            <button type="submit" class="btn-v2"
+                                style="background: none; border: 1px solid var(--accent-v2); padding: 15px 30px; color: var(--accent-v2); cursor: pointer; font-weight: 800; letter-spacing: 2px;">
+                                SEND MESSAGE <i data-lucide="arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Global Footer CTA -->
+            <footer class="footer-v2">
+                <div class="container">
+                    <div class="footer-cta fade-up">
+                        <h4 data-i18n="footer_cta">Ready to sail?</h4>
+                        <a href="mailto:alpina@alpinashipping.com" class="footer-mail">alpina@alpinashipping.com</a>
+                    </div>
+                    <div class="footer-bottom-v2">
+                        <br><br>
+                        <p data-i18n="footer_copy">© 2026 Alpina Shipping. Developed for Tomorrow.</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

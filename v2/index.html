@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpina Shipping • Precision in Maritime</title>
+    <link rel="icon" type="image/png" href="../images/logo_mini.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="v2-theme">
+
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <span class="loader-text">Alpina Shipping</span>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <!-- Premium Nav -->
+    <header class="header-v2">
+        <div class="header-inner">
+            <a href="index.html" class="logo-v2">
+                <img src="../images/alpina_logo2.png" alt="Alpina">
+            </a>
+            <nav class="nav-v2">
+                <div class="nav-links">
+                    <a href="index.html" data-i18n="nav_home">Ana Sayfa</a>
+                    <a href="services.html" data-i18n="nav_services">Hizmetler</a>
+                    <a href="reports.html" data-i18n="nav_reports">Raporlar</a>
+                    <a href="team.html" data-i18n="nav_team">Ekibimiz</a>
+                    <a href="contact.html" data-i18n="nav_contact">İletişim</a>
+                </div>
+                <div class="lang-switch-v2" onclick="toggleLanguage()">
+                    <span id="lang-text">EN</span>
+                </div>
+                <button class="burger-v2" onclick="document.body.classList.toggle('nav-v2-active')">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="smooth-wrapper">
+        <div class="smooth-content">
+
+            <!-- Cinematic Brand Loader -->
+            <!-- Cinematic Hero -->
+            <section class="hero-v2">
+                <div class="hero-bg-parallax" style="background-image: url('../images/ship-images/ship10.jpg');"></div>
+                <div class="hero-overlay-dark"></div>
+                <div class="container hero-content">
+                    <div class="hero-text-block">
+                        <span class="hero-label" data-i18n="hero_label">Leading Experts Since 1983</span>
+                        <h1 class="hero-heading split-text" data-i18n="hero_heading">
+                            Navigating <br> Global Waters <br> with Precision.
+                        </h1>
+                    </div>
+                </div>
+                <div class="hero-scroll-tag">
+                    <span data-i18n="hero_scroll">Scroll to explore</span>
+                    <div class="scroll-line"></div>
+                </div>
+            </section>
+
+            <!-- Text Reveal Section -->
+            <section class="section-v2 reveal-section">
+                <div class="container">
+                    <div class="reveal-box">
+                        <p class="reveal-text" data-i18n="reveal_main">
+                            Alpina is more than just a brokerage; <br>
+                            we are <span class="highlight">strategic partners</span> committed <br>
+                            to the lifecycle of your fleet.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Floating Glass Service Grid -->
+            <section class="section-v2 services-showcase-v2">
+                <div class="container fade-up">
+                    <span class="section-label-v2" data-i18n="services_label">EXPERT SOLUTIONS</span>
+                    <h2 data-i18n="services_title" style="margin-bottom: 60px;">Neler Yapıyoruz?</h2>
+
+                    <div class="services-grid-v2">
+                        <!-- Item 1 -->
+                        <div class="service-item-v2 fade-up">
+                            <div class="item-bg-container">
+                                <div class="item-bg" style="background-image: url('../images/ship-images/ship02.jpg');">
+                                </div>
+                            </div>
+                            <div class="item-glass-info">
+                                <h3 data-i18n="service_nb_title">New Building</h3>
+                                <p data-i18n="service_nb_desc">From sketch to sea. Strategic shipyard management with
+                                    unmatched technical oversight.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="service-item-v2 fade-up">
+                            <div class="item-bg-container">
+                                <div class="item-bg" style="background-image: url('../images/ship-images/ship01.jpg');">
+                                </div>
+                            </div>
+                            <div class="item-glass-info">
+                                <h3 data-i18n="service_sh_title">Second Hand</h3>
+                                <p data-i18n="service_sh_desc">Asset management with global reach and deep-rooted local
+                                    insight since 1983.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="service-item-v2 fade-up">
+                            <div class="item-bg-container">
+                                <div class="item-bg" style="background-image: url('../images/ship-images/ship03.jpg');">
+                                </div>
+                            </div>
+                            <div class="item-glass-info">
+                                <h3 data-i18n="service_sc_title">Scrap & Recycling</h3>
+                                <p data-i18n="service_sc_desc">Leading the way in environmentally conscious and
+                                    sustainable decommissioning services.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Premium Market Snap -->
+            <!-- The Alpina Advantage (Bento Grid) -->
+            <section class="section-v2 advantage-v2">
+                <div class="container">
+                    <div class="advantage-header-v2 fade-up">
+                        <span class="section-label-v2" data-i18n="adv_label">WHY ALPINA</span>
+                        <h2 data-i18n="adv_title">The Alpina Edge</h2>
+                    </div>
+                    <div class="advantage-grid">
+                        <div class="advantage-card c-large fade-up">
+                            <span class="card-number-bg">01</span>
+                            <i data-lucide="shield-check"></i>
+                            <h3 data-i18n="adv_1_t">Proven Legacy</h3>
+                            <p data-i18n="adv_1_d">Over 40 years of unwavering commitment to excellence in the global
+                                maritime industry since 1983.</p>
+                        </div>
+                        <div class="advantage-card c-small fade-up">
+                            <span class="card-number-bg">02</span>
+                            <i data-lucide="globe"></i>
+                            <h3 data-i18n="adv_2_t">Global Hubs</h3>
+                            <p data-i18n="adv_2_d">Strategic presence across Europe, Asia, and Middle East.</p>
+                        </div>
+                        <div class="advantage-card c-small fade-up">
+                            <span class="card-number-bg">03</span>
+                            <i data-lucide="users"></i>
+                            <h3 data-i18n="adv_3_t">Expertise</h3>
+                            <p data-i18n="adv_3_d">Our team of naval architects and engineers ensures technical
+                                precision.</p>
+                        </div>
+                        <div class="advantage-card c-large fade-up">
+                            <span class="card-number-bg">04</span>
+                            <i data-lucide="line-chart"></i>
+                            <h3 data-i18n="adv_4_t">Market Intelligence</h3>
+                            <p data-i18n="adv_4_d">Sophisticated data analysis and real-time shipping reports empower
+                                your most critical investment decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Global Footer CTA -->
+            <footer class="footer-v2">
+                <div class="container">
+                    <div class="footer-cta fade-up">
+                        <h4 data-i18n="footer_cta">Ready to sail?</h4>
+                        <a href="mailto:alpina@alpinashipping.com" class="footer-mail">alpina@alpinashipping.com</a>
+                    </div>
+                    <div class="footer-bottom-v2">
+                        <br>
+                        <br>
+                        <p data-i18n="footer_copy">© 2026 Alpina Shipping. Developed for Tomorrow.</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

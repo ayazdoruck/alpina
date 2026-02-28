@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpina Shipping • Our Team</title>
+    <link rel="icon" type="image/png" href="../images/logo_mini.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="v2-theme">
+    <!-- Cinematic Brand Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <span class="loader-text">Alpina Shipping</span>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <!-- Premium Nav -->
+    <header class="header-v2">
+        <div class="header-inner">
+            <a href="index.html" class="logo-v2">
+                <img src="../images/alpina_logo2.png" alt="Alpina">
+            </a>
+            <nav class="nav-v2">
+                <div class="nav-links">
+                    <a href="index.html" data-i18n="nav_home">Ana Sayfa</a>
+                    <a href="services.html" data-i18n="nav_services">Hizmetler</a>
+                    <a href="reports.html" data-i18n="nav_reports">Raporlar</a>
+                    <a href="team.html" data-i18n="nav_team">Ekibimiz</a>
+                    <a href="contact.html" data-i18n="nav_contact">İletişim</a>
+                </div>
+                <div class="lang-switch-v2" onclick="toggleLanguage()">
+                    <span id="lang-text">EN</span>
+                </div>
+                <button class="burger-v2" onclick="document.body.classList.toggle('nav-v2-active')">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="smooth-wrapper">
+        <div class="smooth-content">
+
+            <!-- Page Header -->
+            <section class="section-v2 sub-page-header">
+                <div class="container">
+                    <span class="hero-label" data-i18n="team_label">WHO WE ARE</span>
+                    <h1 class="hero-heading split-text" data-i18n="team_title">Vizyoner Ekibimiz</h1>
+                </div>
+            </section>
+
+            <!-- Team Grid -->
+            <section class="section-v2 team-section">
+                <div class="container">
+                    <div class="team-grid-v2">
+
+                        <!-- Giorgio Denaro -->
+                        <div class="team-card-v2 fade-up">
+                            <div class="person-img"
+                                style="background-image: url('../images/employees/GiorgioDenaro.jpg');"></div>
+                            <div class="person-info">
+                                <h3>Giorgio Denaro</h3>
+                                <span data-i18n="team_giorgio_title">Yönetici / Broker (Kaptan)</span>
+                            </div>
+                            <div class="team-card-hover-details">
+                                <div class="hover-details-content">
+                                    <p><i data-lucide="mail"></i> gdenaro@alpinashipping.com</p>
+                                    <p><i data-lucide="phone"></i> +90 212 320 15 70</p>
+                                    <p><i data-lucide="smartphone"></i> +90 533 516 64 08</p>
+                                    <div class="social-mini-v2">
+                                        <a href="mailto:gdenaro@alpinashipping.com" class="social-link-v2"><i
+                                                data-lucide="mail"></i></a>
+                                        <a href="#" class="social-link-v2"><i data-lucide="linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hakan Coşkunfırat -->
+                        <div class="team-card-v2 fade-up">
+                            <div class="person-img"
+                                style="background-image: url('../images/employees/HakanCoskunfirat.jpg');"></div>
+                            <div class="person-info">
+                                <h3>Hakan Coşkunfırat</h3>
+                                <span data-i18n="team_hakan_title">Broker, Mühendis</span>
+                            </div>
+                            <div class="team-card-hover-details">
+                                <div class="hover-details-content">
+                                    <p><i data-lucide="mail"></i> hcoskunfirat@alpinashipping.com</p>
+                                    <p><i data-lucide="phone"></i> +90 212 320 15 70</p>
+                                    <p><i data-lucide="smartphone"></i> +90 535 540 44 30</p>
+                                    <div class="social-mini-v2">
+                                        <a href="mailto:hcoskunfirat@alpinashipping.com" class="social-link-v2"><i
+                                                data-lucide="mail"></i></a>
+                                        <a href="#" class="social-link-v2"><i data-lucide="linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- İlknur Güngör -->
+                        <div class="team-card-v2 fade-up">
+                            <div class="person-img"
+                                style="background-image: url('../images/employees/IlknurOztas.jpg');"></div>
+                            <div class="person-info">
+                                <h3>İlknur Güngör</h3>
+                                <span data-i18n="team_ilknur_title">Danışma / Muhasebe</span>
+                            </div>
+                            <div class="team-card-hover-details">
+                                <div class="hover-details-content">
+                                    <p><i data-lucide="mail"></i> ilknurgungor@alpinashipping.com</p>
+                                    <p><i data-lucide="phone"></i> +90 212 320 15 70</p>
+                                    <div class="social-mini-v2">
+                                        <a href="mailto:ilknurgungor@alpinashipping.com" class="social-link-v2"><i
+                                                data-lucide="mail"></i></a>
+                                        <a href="#" class="social-link-v2"><i data-lucide="linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kübra Caner -->
+                        <div class="team-card-v2 fade-up">
+                            <div class="person-img"
+                                style="background-image: url('../images/employees/KubraCaner.jpg');"></div>
+                            <div class="person-info">
+                                <h3>Kübra Caner</h3>
+                                <span data-i18n="team_kubra_title">Broker</span>
+                            </div>
+                            <div class="team-card-hover-details">
+                                <div class="hover-details-content">
+                                    <p><i data-lucide="mail"></i> kcaner@alpinashipping.com</p>
+                                    <p><i data-lucide="phone"></i> +90 212 320 15 70</p>
+                                    <p><i data-lucide="smartphone"></i> +90 506 707 79 87</p>
+                                    <div class="social-mini-v2">
+                                        <a href="mailto:kcaner@alpinashipping.com" class="social-link-v2"><i
+                                                data-lucide="mail"></i></a>
+                                        <a href="#" class="social-link-v2"><i data-lucide="linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mehmet Turhan -->
+                        <div class="team-card-v2 fade-up">
+                            <div class="person-img"
+                                style="background-image: url('../images/employees/MehmetTurhan.jpg');"></div>
+                            <div class="person-info">
+                                <h3>Mehmet Turhan</h3>
+                                <span data-i18n="team_mehmet_title">Broker, Mühendis</span>
+                            </div>
+                            <div class="team-card-hover-details">
+                                <div class="hover-details-content">
+                                    <p><i data-lucide="mail"></i> mturhan@alpinashipping.com</p>
+                                    <p><i data-lucide="phone"></i> +90 212 320 15 70</p>
+                                    <p><i data-lucide="smartphone"></i> +90 506 889 28 91</p>
+                                    <div class="social-mini-v2">
+                                        <a href="mailto:mturhan@alpinashipping.com" class="social-link-v2"><i
+                                                data-lucide="mail"></i></a>
+                                        <a href="#" class="social-link-v2"><i data-lucide="linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sermet Arınç -->
+                        <div class="team-card-v2 fade-up">
+                            <div class="person-img"
+                                style="background-image: url('../images/employees/SermetArinc.jpg');"></div>
+                            <div class="person-info">
+                                <h3>Sermet Arınç</h3>
+                                <span data-i18n="team_sermet_title">Ulaşım</span>
+                            </div>
+                            <div class="team-card-hover-details">
+                                <div class="hover-details-content">
+                                    <p><i data-lucide="phone"></i> +90 212 320 15 70</p>
+                                    <p><i data-lucide="smartphone"></i> +90 536 953 37 54</p>
+                                    <div class="social-mini-v2">
+                                        <a href="mailto:alpina@alpinashipping.com" class="social-link-v2"><i
+                                                data-lucide="mail"></i></a>
+                                        <a href="#" class="social-link-v2"><i data-lucide="linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Global Footer CTA -->
+            <footer class="footer-v2">
+                <div class="container">
+                    <div class="footer-cta fade-up">
+                        <h4 data-i18n="footer_cta">Ready to sail?</h4>
+                        <a href="mailto:alpina@alpinashipping.com" class="footer-mail">alpina@alpinashipping.com</a>
+                    </div>
+                    <div class="footer-bottom-v2">
+                        <br><br>
+                        <p data-i18n="footer_copy">© 2026 Alpina Shipping. Developed for Tomorrow.</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

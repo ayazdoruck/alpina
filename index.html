@@ -4,299 +4,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpina Denizcilik | Gemi Brokerlik & Hizmetleri</title>
-    <meta name="description"
-        content="1983'ten beri Türk ve uluslararası denizcilik piyasalarında öncü Gemi Brokerlik firması.">
-    <link rel="icon" type="image/png" href="images/logo_mini.png">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Alpina Shipping • Edition Selector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --navy: #011121;
+            --gold: #c5a059;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--navy);
+            color: var(--white);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.1) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .logo-main {
+            height: 60px;
+            margin-bottom: 60px;
+            filter: brightness(0) invert(1);
+        }
+
+        .selector-container {
+            display: flex;
+            gap: 40px;
+            max-width: 1000px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .option-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 12px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .option-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--gold);
+            transform: translateY(-10px);
+        }
+
+        .v-tag {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .option-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .option-card p {
+            font-size: 14px;
+            opacity: 0.5;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 280px;
+        }
+
+        .enter-btn {
+            padding: 15px 40px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .option-card:hover .enter-btn {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                height: auto;
+                padding: 60px 0;
+            }
+
+            .selector-container {
+                flex-direction: column;
+                padding: 40px;
+            }
+
+            .logo-main {
+                transform: scale(0.8);
+            }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
-<body class="page-home">
+<body>
+    <div class="bg-gradient"></div>
 
-    <header class="header">
-        <div class="container">
-            <div class="nav-upper">
-                <!-- Desktop animated logo (hidden on mobile via CSS) -->
-                <a href="index.html" class="logo hero-state">
-                    <img src="images/alpina_logo2.png" alt="Alpina Shipping">
-                </a>
+    <img src="images/alpina_logo2.png" alt="Alpina Shipping" class="logo-main">
+    <h1>Choose your experience version ;</h1>
+    <div class="selector-container">
+        <!-- V1: Original Classic -->
+        <a href="v1/index.html" class="option-card">
+            <span class="v-tag">Original Experience</span>
+            <h2>İlk versiyon</h2>
+            <p>Daha temiz, orjinale yakın versiyon.</p>
+            <div class="enter-btn">V1'i İncele</div>
+        </a>
 
-                <button class="menu-toggle" aria-label="Menu">
-                    <i data-lucide="menu"></i>
-                </button>
+        <!-- V2: Premium Scroll -->
+        <a href="v2/index.html" class="option-card">
+            <span class="v-tag">High-End Interactive</span>
+            <h2>Yeni versiyon</h2>
+            <p>Daha modern, daha interaktif versiyon.</p>
+            <div class="enter-btn">V2'yi İncele</div>
+        </a>
+    </div>
 
-                <!-- Mobile-only: hidden on home page, shown on other pages -->
-                <div class="mobile-nav-logo">
-                    <a href="index.html"><img src="images/logo_mini.png" alt="Alpina"></a>
-                </div>
-                <nav class="nav-menu">
-                    <div class="nav-header-mobile">
-                        <img src="images/logo_mini.png" alt="Logo">
-                        <button class="menu-close"><i data-lucide="x"></i></button>
-                    </div>
-                    <a href="index.html" class="nav-item active">
-                        <i data-lucide="home"></i>
-                        <span data-i18n="nav_home">Ana Sayfa</span>
-                    </a>
-                    <a href="services.html" class="nav-item">
-                        <i data-lucide="anchor"></i>
-                        <span data-i18n="nav_services">Hizmetler</span>
-                    </a>
-                    <a href="reports.html" class="nav-item">
-                        <i data-lucide="line-chart"></i>
-                        <span data-i18n="nav_reports">Market Raporları</span>
-                    </a>
-                    <a href="team.html" class="nav-item">
-                        <i data-lucide="users"></i>
-                        <span data-i18n="nav_team">Ekibimiz</span>
-                    </a>
-                    <a href="contact.html" class="nav-item">
-                        <i data-lucide="mail"></i>
-                        <span data-i18n="nav_contact">İletişim</span>
-                    </a>
-                </nav>
-                <div class="lang-switch">
-                    <i data-lucide="globe"></i> EN
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- Modern Cinematic Hero Slider -->
-        <section class="hero">
-            <!-- Mobile-only centered hero logo -->
-            <div class="hero-mobile-logo">
-                <img src="images/alpina_logo2.png" alt="Alpina Shipping">
-            </div>
-            <div class="slide-container">
-                <!-- Slide 1: Video Background -->
-                <div class="slide active">
-                    <div class="slide-video-wrap">
-                        <video class="hero-video" autoplay muted loop playsinline
-                            poster="images/ship-images/ship10.jpg">
-                            <source src="images/hero-video.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="hero-overlay"></div>
-                    <div class="container">
-                        <div class="hero-content">
-                            <p class="subtitle" data-i18n="hero_subtitle_1">Denizcilikte 40 Yıllık Güven</p>
-                            <h1 data-i18n="hero_title_1">Global Gemi <br>Brokerlik Çözümleri</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slide-zoom" style="background-image: url('images/ship-images/ship07.jpg');"></div>
-                    <div class="hero-overlay"></div>
-                    <div class="container">
-                        <div class="hero-content">
-                            <p class="subtitle" data-i18n="hero_subtitle_2">Yeni İnşa Projeleri</p>
-                            <h1 data-i18n="hero_title_2">Tasarım ve İnşada <br>Stratejik Ortaklık</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slide-zoom" style="background-image: url('images/ship-images/ship02.jpg');"></div>
-                    <div class="hero-overlay"></div>
-                    <div class="container">
-                        <div class="hero-content">
-                            <p class="subtitle" data-i18n="hero_subtitle_3">Uluslararası Ticaret</p>
-                            <h1 data-i18n="hero_title_3">İkinci El Gemi <br>Alım ve Satım</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-nav">
-                <button class="nav-btn prev" onclick="changeSlide(-1)">
-                    <i data-lucide="chevron-left"></i>
-                </button>
-                <button class="nav-btn next" onclick="changeSlide(1)">
-                    <i data-lucide="chevron-right"></i>
-                </button>
-            </div>
-        </section>
-
-        <!-- Why Alpina Section -->
-        <section class="section why-alpina-section">
-            <div class="container">
-                <div class="why-alpina-header">
-                    <span class="section-label" data-i18n="why_label">Fark Yaratan</span>
-                    <h2 class="section-title" data-i18n="why_title">Neden Alpina?</h2>
-                    <p class="why-alpina-intro" data-i18n="why_intro">40 yılı aşkın tecrübemiz, uzman kadromuz ve
-                        küresel ağımızla müşterilerimize her adımda değer katıyoruz.</p>
-                </div>
-                <div class="why-alpina-grid">
-                    <div class="why-card">
-                        <span class="why-number">01</span>
-                        <div class="why-card-body">
-                            <div class="why-icon"><i data-lucide="shield-check"></i></div>
-                            <h3 data-i18n="why_1_title">Kanıtlanmış Güven</h3>
-                            <p data-i18n="why_1_desc">1983'ten bu yana Türk ve uluslararası denizcilik piyasalarında
-                                kesintisiz hizmet veren köklü bir kurum olarak güvenilirliğimizi her işlemde
-                                ispatlıyoruz.</p>
-                        </div>
-                    </div>
-                    <div class="why-card">
-                        <span class="why-number">02</span>
-                        <div class="why-card-body">
-                            <div class="why-icon"><i data-lucide="globe"></i></div>
-                            <h3 data-i18n="why_2_title">Küresel Erişim</h3>
-                            <p data-i18n="why_2_desc">Avrupa, Asya ve Orta Doğu'daki geniş broker ağımız sayesinde
-                                dünyanın her noktasındaki alıcı ve satıcılara anında ulaşabiliyoruz.</p>
-                        </div>
-                    </div>
-                    <div class="why-card">
-                        <span class="why-number">03</span>
-                        <div class="why-card-body">
-                            <div class="why-icon"><i data-lucide="users"></i></div>
-                            <h3 data-i18n="why_3_title">Uzman Kadro</h3>
-                            <p data-i18n="why_3_desc">Gemi inşaatı mühendislerinden makine uzmanlarına, deneyimli kaptan
-                                brokerlere kadar çok disiplinli ekibimiz her müşteriye özel çözüm üretir.</p>
-                        </div>
-                    </div>
-                    <div class="why-card">
-                        <span class="why-number">04</span>
-                        <div class="why-card-body">
-                            <div class="why-icon"><i data-lucide="bar-chart-2"></i></div>
-                            <h3 data-i18n="why_4_title">Pazar Zekâsı</h3>
-                            <p data-i18n="why_4_desc">Düzenli yayınladığımız market raporları ve anlık piyasa
-                                analizleriyle müşterilerimizin en doğru kararı en doğru zamanda vermesini sağlıyoruz.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Summary -->
-        <section class="section" style="background: var(--bg-light);">
-            <div class="container">
-                <div class="service-detail-block" style="margin-bottom: 0;">
-                    <div class="content-box">
-                        <span class="section-label" data-i18n="about_label">Kurumsal</span>
-                        <h2 data-i18n="about_title">Denizcilikte Köklü Bir Geçmiş</h2>
-                        <p data-i18n="about_desc_1">Alpina Denizcilik ve Tic. Ltd. Şti. Türk ve uluslararası denizcilik
-                            piyasalarında güçlü bir
-                            itibara sahip bir Gemi Brokerlik firmasıdır.</p>
-                        <p data-i18n="about_desc_2">Müşterilerimize kanıtlanmış tecrübelerimiz, rekabetçi hizmet
-                            anlayışımız ve tutarlı piyasa
-                            bilgilerimizi sunuyoruz.</p>
-                    </div>
-                    <div class="image-box">
-                        <img src="images/ship-images/ship05.jpg" alt="Alpina Kurumsal">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Overview Section -->
-        <section class="section section-dark">
-            <div class="container">
-                <span class="section-label" data-i18n="services_label">Alanında Uzman</span>
-                <h2 class="section-title" data-i18n="services_title">Neler Yapıyoruz?</h2>
-
-                <div class="showcase-grid">
-                    <a href="services.html#yeni-insa" class="showcase-item">
-                        <div class="showcase-bg" style="background-image: url('images/ship-images/ship02.jpg');"></div>
-                        <div class="showcase-overlay"></div>
-                        <div class="showcase-text">
-                            <h3 data-i18n="service_newbuild_title">Yeni İnşa</h3>
-                            <p data-i18n="service_newbuild_desc">Türkiye ve Uzak Doğu tersanelerinde stratejik sipariş
-                                yönetimi.</p>
-                        </div>
-                    </a>
-                    <a href="services.html#ikinci-el" class="showcase-item">
-                        <div class="showcase-bg" style="background-image: url('images/ship-images/ship01.jpg');"></div>
-                        <div class="showcase-overlay"></div>
-                        <div class="showcase-text">
-                            <h3 data-i18n="service_secondhand_title">İkinci El</h3>
-                            <p data-i18n="service_secondhand_desc">Tanker, Kuru Yük ve Konteyner gemilerinde aktif alım
-                                satım.</p>
-                        </div>
-                    </a>
-                    <a href="services.html#hurda" class="showcase-item">
-                        <div class="showcase-bg" style="background-image: url('images/ship-images/ship03.jpg');"></div>
-                        <div class="showcase-overlay"></div>
-                        <div class="showcase-text">
-                            <h3 data-i18n="service_scrap_title">Hurda Gemi</h3>
-                            <p data-i18n="service_scrap_desc">Çevre dostu söküm tesislerine güvenli ve kârlı satış
-                                aracılığı.</p>
-                        </div>
-                    </a>
-                    <a href="services.html#kiralama" class="showcase-item">
-                        <div class="showcase-bg" style="background-image: url('images/ship-images/ship04.jpg');"></div>
-                        <div class="showcase-overlay"></div>
-                        <div class="showcase-text">
-                            <h3 data-i18n="service_chartering_title">Kiralama &amp; Proje</h3>
-                            <p data-i18n="service_chartering_desc">Uzun dönem kiralama ve denizcilik odaklı özel proje
-                                yönetimi.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <img src="images/alpina_logo2.png" alt="Alpina Mini"
-                        style="height: 40px; margin-bottom: 30px; filter: brightness(0) invert(1);">
-                    <p style="opacity: 0.5; font-size: 14px; line-height: 1.8;" data-i18n="footer_desc">1983'ten beri
-                        Türk ve uluslararası
-                        denizcilik piyasalarında güven ve tecrübe ile hizmet vermekteyiz.</p>
-                </div>
-                <div>
-                    <h4 data-i18n="footer_services">Hizmetlerimiz</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html#yeni-insa" data-i18n="service_newbuild_title">Yeni İnşa</a></li>
-                        <li><a href="services.html#ikinci-el" data-i18n="service_secondhand_title">İkinci El
-                                Alım-Satım</a></li>
-                        <li><a href="services.html#hurda" data-i18n="service_scrap_title">Gemi Geri Dönüşüm</a></li>
-                        <li><a href="services.html#kiralama" data-i18n="service_chartering_title">Kiralama & Proje</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 data-i18n="footer_contact">İletişim Bilgileri</h4>
-                    <ul class="footer-contact-info">
-                        <li>
-                            <i data-lucide="map-pin"></i>
-                            <span>Seba Central, Kağıthane, İstanbul</span>
-                        </li>
-                        <li>
-                            <i data-lucide="phone"></i>
-                            <span>+90 212 320 15 70</span>
-                        </li>
-                        <li>
-                            <i data-lucide="mail"></i>
-                            <span>alpina@alpinashipping.com</span>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 data-i18n="footer_quickmenu">Hızlı Menü</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html" data-i18n="nav_home">Ana Sayfa</a></li>
-                        <li><a href="reports.html" data-i18n="nav_reports">Market Raporları</a></li>
-                        <li><a href="team.html" data-i18n="nav_team">Ekibimiz</a></li>
-                        <li><a href="contact.html" data-i18n="nav_contact">İletişim</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright" data-i18n="copyright">
-                &copy; 2026 Alpina Denizcilik ve Ticaret Ltd. Şti. Tüm hakları saklıdır.
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-    <script src="js/i18n.js"></script>
-    <script>lucide.createIcons();</script>
+    <p style="position: fixed; bottom: 30px; opacity: 0.3; font-size: 11px; letter-spacing: 1px;">ALPINA DENIZCILIK VE
+        TICARET LTD. STI.</p>
 </body>
 
 </html>
