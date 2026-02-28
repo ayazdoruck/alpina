@@ -120,11 +120,9 @@ h3 {
 .loader-text {
     font-family: 'Expressa-Serial', 'Playfair Display', serif;
     font-size: 56px;
-    /* Larger, more impactful */
-    font-weight: 800;
-    letter-spacing: 2px;
-    /* Reduced from 12px for better readability */
-    /* Removed text-transform: uppercase; */
+    font-weight: normal;
+    letter-spacing: 0px;
+    text-transform: none !important;
     color: var(--white);
     display: block;
     overflow: hidden;
@@ -935,23 +933,91 @@ h3 {
     margin-top: 15px;
 }
 
-/* REPORTS */
 .report-table-header {
     display: flex;
     padding-bottom: 20px;
-    border-bottom: 2px solid var(--white);
-    font-weight: 800;
-    font-size: 12px;
+    border-bottom: 1px solid var(--border-soft);
+    font-weight: 700;
+    font-size: 11px;
     letter-spacing: 2px;
-    opacity: 0.5;
+    color: var(--text-muted);
+    opacity: 0.6;
+    margin-bottom: 15px;
+}
+
+.report-year-tabs {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.year-tab {
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.year-tab:hover {
+    color: var(--white);
+}
+
+.year-tab::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 60%;
+    height: 8px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath d='M0 3.5c5 0 5-3 10-3s5 3 10 3s5-3 10-3s5 3 10 3' fill='none' stroke='%2300d4ff' stroke-width='2'/%3E%3C/svg%3E") repeat-x;
+    background-size: 20px 8px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.year-tab:hover::after,
+.year-tab.active::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.year-tab:hover::after {
+    opacity: 0.8;
+    animation: maritimeWaveFlow 1.5s linear infinite;
+}
+
+.year-tab.active {
+    color: var(--white);
+}
+
+.year-tab.active::after {
+    background: var(--accent-v2);
+    height: 2px;
+    bottom: 0px;
+    animation: none;
+    transform: translateY(0);
+}
+
+.report-group {
+    display: none;
+}
+
+.report-group.active {
+    display: block;
 }
 
 .report-row {
     display: flex;
     align-items: center;
-    padding: 40px 0;
+    padding: 40px 20px;
     border-bottom: 1px solid var(--border-soft);
     transition: 0.4s;
+    border-radius: 8px;
 }
 
 .report-row:hover {
@@ -959,7 +1025,7 @@ h3 {
 }
 
 .col-date {
-    width: 150px;
+    width: 160px;
     font-weight: 700;
     color: var(--accent-v2);
 }
@@ -968,15 +1034,62 @@ h3 {
     flex: 1;
     font-size: 24px;
     font-family: 'Playfair Display', serif;
+    padding-right: 20px;
+}
+
+.report-table-header .col-title {
+    font-size: 13px;
+    font-family: inherit;
+    padding-right: 0;
+}
+
+.col-action {
+    width: 120px;
+    text-align: right;
 }
 
 .btn-download {
     color: var(--white);
     text-decoration: none;
     font-weight: 700;
-    border: 1px solid var(--white);
-    padding: 10px 20px;
+    border: 1px solid var(--border-soft);
+    padding: 10px 0;
     font-size: 12px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: var(--white);
+    color: var(--primary-v2);
+    border-color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .report-table-header {
+        display: none;
+    }
+
+    .report-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 30px 15px;
+    }
+
+    .col-title {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .btn-download {
+        margin-top: 5px;
+    }
 }
 
 /* FOOTER */

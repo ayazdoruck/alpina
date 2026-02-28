@@ -3,7 +3,7 @@ const translations = {
         // Nav
         nav_home: "Ana Sayfa",
         nav_services: "Hizmetler",
-        nav_reports: "Market Raporları",
+        nav_reports: "Haftalık Market Raporu",
         nav_team: "Ekibimiz",
         nav_contact: "İletişim",
 
@@ -68,7 +68,7 @@ const translations = {
 
         // Reports Page
         reports_page_label: "MARKET",
-        reports_page_title: "Güncel Market Raporları",
+        reports_page_title: "Haftalık Market Raporu",
         reports_page_desc: "Çok yakında en güncel denizcilik piyasası analizleri ve raporları burada paylaşılacaktır.",
 
         // Contact Page
@@ -111,7 +111,7 @@ const translations = {
         // Nav
         nav_home: "Home",
         nav_services: "Services",
-        nav_reports: "Market Reports",
+        nav_reports: "Weekly Market Report",
         nav_team: "Our Team",
         nav_contact: "Contact",
 
@@ -176,7 +176,7 @@ const translations = {
 
         // Reports Page
         reports_page_label: "MARKET",
-        reports_page_title: "Market Reports",
+        reports_page_title: "Weekly Market Report",
         reports_page_desc: "The latest maritime market analysis and reports will be shared here very soon.",
 
         // Contact Page

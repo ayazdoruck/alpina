@@ -4,7 +4,7 @@ const translations = {
         nav_home: "Ana Sayfa",
         nav_about: "Hakkımızda",
         nav_services: "Hizmetlerimiz",
-        nav_reports: "Market Raporları",
+        nav_reports: "Haftalık Market Raporu",
         nav_team: "Ekibimiz",
         nav_contact: "İletişim",
 
@@ -144,6 +144,10 @@ function setLanguageV2(lang) {
         }
     });
 
+    // Update Document Title
+    const pageTitle = translations[lang]['nav_reports'];
+    document.title = `${pageTitle} | Alpina Shipping`;
+
     const langBtn = document.getElementById('lang-text');
     if (langBtn) {
         langBtn.innerText = lang === 'tr' ? 'EN' : 'TR';
@@ -157,6 +161,34 @@ function setLanguageV2(lang) {
     }
 }
 
+function initReportFilters() {
+    const tabs = document.querySelectorAll('.year-tab');
+    const groups = document.querySelectorAll('.report-group');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetYear = tab.getAttribute('data-year');
+
+            // Update Tabs
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Filter Groups
+            groups.forEach(group => {
+                if (group.id === `reports-${targetYear}`) {
+                    group.style.display = 'block';
+                    gsap.fromTo(group.querySelectorAll('.report-row'),
+                        { opacity: 0, y: 30 },
+                        { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power2.out' }
+                    );
+                } else {
+                    group.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
 function toggleLanguage() {
     const current = localStorage.getItem('alpina_lang_v2') || 'tr';
     setLanguageV2(current === 'tr' ? 'en' : 'tr');
@@ -165,4 +197,5 @@ function toggleLanguage() {
 document.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('alpina_lang_v2') || 'tr';
     setLanguageV2(saved);
+    initReportFilters();
 });
