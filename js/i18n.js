@@ -92,7 +92,20 @@ const translations = {
         team_ilknur_title: "Danışma / Muhasebe",
         team_kubra_title: "Broker",
         team_mehmet_title: "Broker, Gemi Makineleri İşletme Mühendisi",
-        team_sermet_title: "Ulaşım"
+        team_sermet_title: "Ulaşım",
+
+        // Why Alpina
+        why_label: "Fark Yaratan",
+        why_title: "Neden Alpina?",
+        why_intro: "40 yılı aşkın tecrübemiz, uzman kadromuz ve küresel ağımızla müşterilerimize her adımda değer katıyoruz.",
+        why_1_title: "Kanıtlanmış Güven",
+        why_1_desc: "1983'ten bu yana Türk ve uluslararası denizcilik piyasalarında kesintisiz hizmet veren köklü bir kurum olarak güvenilirliğimizi her işlemde ispatlıyoruz.",
+        why_2_title: "Küresel Erişim",
+        why_2_desc: "Avrupa, Asya ve Orta Doğu'daki geniş broker ağımız sayesinde dünyanın her noktasındaki alıcı ve satıcılara anında ulaşabiliyoruz.",
+        why_3_title: "Uzman Kadro",
+        why_3_desc: "Gemi inşaatı mühendislerinden makine uzmanlarına, deneyimli kaptan brokerlere kadar çok disiplinli ekibimiz her müşteriye özel çözüm üretir.",
+        why_4_title: "Pazar Zekâsı",
+        why_4_desc: "Düzenli yayınladığımız market raporları ve anlık piyasa analizleriyle müşterilerimizin en doğru kararı en doğru zamanda vermesini sağlıyoruz."
     },
     en: {
         // Nav
@@ -187,7 +200,20 @@ const translations = {
         team_ilknur_title: "Assistant / Accountant",
         team_kubra_title: "Broker",
         team_mehmet_title: "Broker, Marine Engineer",
-        team_sermet_title: "Transportation"
+        team_sermet_title: "Transportation",
+
+        // Why Alpina
+        why_label: "Why Choose Us",
+        why_title: "Why Alpina?",
+        why_intro: "With over 40 years of experience, an expert team and a global network, we add value for our clients at every step.",
+        why_1_title: "Proven Trust",
+        why_1_desc: "As an established institution providing uninterrupted service in Turkish and international maritime markets since 1983, we prove our reliability with every transaction.",
+        why_2_title: "Global Reach",
+        why_2_desc: "Thanks to our extensive broker network in Europe, Asia and the Middle East, we can instantly connect buyers and sellers anywhere in the world.",
+        why_3_title: "Expert Team",
+        why_3_desc: "From naval architects and marine engineers to experienced captain-brokers, our multidisciplinary team creates tailored solutions for every client.",
+        why_4_title: "Market Intelligence",
+        why_4_desc: "Through our regularly published market reports and real-time market analysis, we enable our clients to make the right decision at the right time."
     }
 };
 
